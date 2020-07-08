@@ -12,23 +12,35 @@ const pool = new Pool({
   }
 });
 
-//CREATE Table?
-router.get('/createemployeestable', function(req, res, next){
+/* CREATE Table only once */
+// router.get('/createemployeestable', function(req, res, next){
 
-  const sql = "CREATE TABLE Employees(id SERIAL, title TEXT, description TEXT, imageUrl TEXT);"
+//   const sql = "CREATE TABLE Employees(id SERIAL, title TEXT, description TEXT, imageUrl TEXT);"
 
-  pool.query(sql, function(err, dbResponse){
+//   pool.query(sql, function(err, dbResponse){
+//     if(err){
+//       res.json(err);
+//       return;
+//     }else{
+//       return res.json(dbResponse);
+//     }
+//   })
+// })
+
+/* CREATE Table only once */
+
+router.get('/employees', function(req, res, next){
+
+  const sql = "SELECT * FROM Employees";
+
+  pool.query(sql, function(err, dbRes){
     if(err){
-      res.json(err);
-      return;
-    }else{
-      return res.json(dbResponse);
+      return res.json(err)
     }
+    console.log(dbRes)
   })
 
-
-})
-
+});
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
