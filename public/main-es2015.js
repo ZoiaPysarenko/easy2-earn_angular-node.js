@@ -1078,7 +1078,7 @@ function WorksListComponent_app_flip_card_4_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-flip-card", 4);
 } if (rf & 2) {
     const work_r1 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("workTitle", work_r1.title)("workDescription", work_r1.description)("workImage", work_r1.imageUrl);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("workTitle", work_r1.title)("workDescription", work_r1.description)("workImage", work_r1.imageurl);
 } }
 class WorksListComponent {
     constructor(worksService) {

@@ -2093,7 +2093,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 2) {
         var work_r1 = ctx.$implicit;
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("workTitle", work_r1.title)("workDescription", work_r1.description)("workImage", work_r1.imageUrl);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("workTitle", work_r1.title)("workDescription", work_r1.description)("workImage", work_r1.imageurl);
       }
     }
 
