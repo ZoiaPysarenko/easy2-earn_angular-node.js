@@ -1,16 +1,16 @@
 const express = require('express');
 const router = express.Router();
-// Database Postgre
-const { Pool } = require('pg');
+// // Database Postgre
+// const { Pool } = require('pg');
 
-//connecting to DB
-//the constructor of Pool takes a configuration json object {conncetionString:"",ssl: { rejectUnauthorized: false }}
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false
-  }
-});
+// //connecting to DB
+// //the constructor of Pool takes a configuration json object {conncetionString:"",ssl: { rejectUnauthorized: false }}
+// const pool = new Pool({
+//   connectionString: process.env.DATABASE_URL,
+//   ssl: {
+//     rejectUnauthorized: false
+//   }
+// });
 
 /* CREATE Table only once */
 // router.get('/createemployeestable', function(req, res, next){
