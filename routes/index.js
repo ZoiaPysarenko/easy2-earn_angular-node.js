@@ -39,7 +39,7 @@ router.get('/employees', function(req, res, next){
     }
     console.log(dbRes)
 
-    res.render('employees');
+    res.render('employees', {'employees': dbRes.rows});
   })
 
 });
