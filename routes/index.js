@@ -29,20 +29,20 @@ const pool = new Pool({
 
 /* CREATE Table only once */
 
-router.get('/employees', function(req, res, next){
+// router.get('/employees', function(req, res, next){
 
-  const sql = "SELECT * FROM Employees";
+//   const sql = "SELECT * FROM Employees";
 
-  pool.query(sql, function(err, dbRes){
-    if(err){
-      return res.json(err)
-    }
-    console.log(dbRes)
+//   pool.query(sql, function(err, dbRes){
+//     if(err){
+//       return res.json(err)
+//     }
+//     console.log(dbRes)
 
-    res.render('employees', {'employees': dbRes.rows});
-  })
+//     res.render('employees', {'employees': dbRes.rows});
+//   })
 
-});
+// });
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

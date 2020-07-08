@@ -1,5 +1,20 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+
+// Database Postgre
+const { Pool } = require('pg');
+
+//connecting to DB
+//the constructor of Pool takes a configuration json object {conncetionString:"",ssl: { rejectUnauthorized: false }}
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
+});
+
+
+
 
 var employeesData = [
     {
@@ -61,8 +76,21 @@ var worksData = [
 
 /* /api/employees */
 router.get('/employees', function(req, res, next) {
-    var data = employeesData;
-    res.json(data);
+
+  const sql = "SELECT * FROM Employees";
+
+  pool.query(sql, function(err, dbRes){
+    if(err){
+      return res.json(err)
+    }
+    console.log(dbRes)
+
+    return res.json(dbRes.rows);
+  })
+
+
+    // var data = employeesData;
+    // res.json(data);
   });
 
 router.get('/works', function(req, res, next){
