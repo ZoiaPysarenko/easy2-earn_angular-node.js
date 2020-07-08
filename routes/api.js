@@ -77,7 +77,7 @@ var worksData = [
 /* /api/employees */
 router.get('/employees', function(req, res, next) {
 
-  const sql = "SELECT * FROM Employees";
+  const sql = "SELECT * FROM employees";
 
   pool.query(sql, function(err, dbRes){
     if(err){
@@ -94,8 +94,20 @@ router.get('/employees', function(req, res, next) {
   });
 
 router.get('/works', function(req, res, next){
-    var data = worksData;
-    res.json(worksData);
+
+  const sql = "SELECT * FROM works";
+
+  pool.query(sql, function(err, dbRes){
+    if(err){
+      return res.json(err)
+    }
+    console.log(dbRes)
+
+    return res.json(dbRes.rows);
+  })
+
+    // var data = worksData;
+    // res.json(worksData);
 });  
   
 module.exports = router;
