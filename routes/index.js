@@ -13,7 +13,21 @@ const pool = new Pool({
 });
 
 //CREATE Table?
-router.get('/createtables', function(req, res, next){})
+router.get('/createemployeestable', function(req, res, next){
+
+  const url = "CREATE TABLE Employees(id SERIAL, title TEXT, description TEXT, imageUrl TEXT);"
+
+  pool.query(sql, function(err, dbResponse){
+    if(err){
+      res.json(err);
+      return;
+    }else{
+      return res.json(dbResponse);
+    }
+  })
+
+
+})
 
 
 /* GET home page. */
