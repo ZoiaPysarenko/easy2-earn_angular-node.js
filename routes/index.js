@@ -15,7 +15,7 @@ const pool = new Pool({
 //CREATE Table?
 router.get('/createemployeestable', function(req, res, next){
 
-  const url = "CREATE TABLE Employees(id SERIAL, title TEXT, description TEXT, imageUrl TEXT);"
+  const sql = "CREATE TABLE Employees(id SERIAL, title TEXT, description TEXT, imageUrl TEXT);"
 
   pool.query(sql, function(err, dbResponse){
     if(err){
