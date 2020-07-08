@@ -38,6 +38,8 @@ router.get('/employees', function(req, res, next){
       return res.json(err)
     }
     console.log(dbRes)
+
+    res.render('employees');
   })
 
 });
