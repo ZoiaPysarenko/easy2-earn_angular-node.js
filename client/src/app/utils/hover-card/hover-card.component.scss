@@ -1,0 +1,47 @@
+.card{
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+
+.card > div{
+  flex-basis: 50%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.card-img{
+  height: 300px;
+}
+
+.card:hover .card-body{
+  transition: background-color 500ms linear;
+  background: rgb(131, 88, 171);
+}
+
+.card-body{
+  position: relative;
+}
+
+.card-info{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card-description{
+  visibility: hidden;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card:hover .card-body .card-info{
+  visibility: hidden;
+}
+.card:hover .card-body .card-description{
+  visibility: visible;
+}

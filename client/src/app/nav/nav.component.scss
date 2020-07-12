@@ -1,0 +1,42 @@
+.nav-panel{
+  position: sticky;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.list{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.pointer{
+  background: url('../../assets/icons/pointer-34.png') no-repeat left top;
+  height: 34px;
+  // width: 34px;
+  padding-top: 7px;
+  padding-left: 40px;
+  margin: 10px;
+}
+
+li.current-section.pointer span{
+  color: #5d50ff;
+  transform: scale(1.5);
+}
+
+li.pointer span{
+    display: block;
+    transition: transform 0.2s ease-in-out;
+    transform-origin: 0 50%;
+}
+
+li.pointer:hover span{
+  color: #5d50ff;
+  transform: scale(1.5);
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-panel{
+    display: none;
+  }
+}

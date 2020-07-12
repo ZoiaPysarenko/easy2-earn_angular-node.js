@@ -1,0 +1,17 @@
+<div class="work-list__header m-5 text-center">
+  Our products
+</div>
+
+<div class="container">
+  <div class="row">
+    <app-flip-card class="col-lg-3 col-sm-12 mb-1"
+      *ngFor="let work of works"
+      [workTitle]="work.title"
+      [workDescription]="work.description"
+      [workImage]="work.imageurl" ></app-flip-card>
+  </div>
+</div>
+
+
+
+

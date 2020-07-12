@@ -1,0 +1,30 @@
+<app-nav class="nav-panel-cont" [currentSecID]="currentSection"></app-nav>
+
+<div
+  id="parentDiv"
+  scrollSpy
+  [spiedTags]="['DIV']"
+  (sectionChange)="onSectionChange($event)">
+
+
+  <div id="header">
+    <app-header></app-header>
+  </div>
+  <div id="works">
+    <app-works-list></app-works-list>
+  </div>
+  <div id="socials">
+    <app-socials></app-socials>
+  </div>
+  <div id="team">
+    <app-team></app-team>
+  </div>
+  <div id="contacts">
+    <app-contacts></app-contacts>
+  </div>
+</div>
+
+<!-- nav -->
+<router-outlet></router-outlet>
+
+

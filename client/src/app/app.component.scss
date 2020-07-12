@@ -1,0 +1,17 @@
+.nav-panel-cont{
+  height: 0;
+  display: block;
+  position: fixed;
+  z-index: 99;
+  top: 50%;
+}
+
+#parentDiv{
+  max-height: 100vh;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.current-section {
+  background-color: cornflowerblue
+}

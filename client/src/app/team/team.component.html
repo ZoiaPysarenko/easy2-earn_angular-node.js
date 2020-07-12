@@ -1,0 +1,18 @@
+<div class="team__header m-5 text-center">
+  Our Team
+ </div>
+
+ <section class="team__container container">
+   <div class="row">
+    <app-hover-card class="col-lg-6 col-sm-12 mb-1"
+      *ngFor="let employee of employees"
+      [name]="employee.name"
+      [position]="employee.position"
+      [description]="employee.description"
+      [imageUrl]="employee.imageurl"></app-hover-card>
+   </div>
+ </section>
+
+
+
+

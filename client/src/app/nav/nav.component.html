@@ -1,0 +1,34 @@
+<div class="nav-panel">
+  <ul class="list">
+      <li
+        class="pointer"
+        (click)="scrollTo('header')"
+        [ngClass]="{ 'current-section': currentSecID === 'header' }">
+        <span>Header</span>
+      </li>
+      <li
+        class="pointer"
+        (click)="scrollTo('works')"
+        [ngClass]="{ 'current-section': currentSecID === 'works' }">
+        <span>Works</span>
+      </li>
+      <li
+        class="pointer"
+        (click)="scrollTo('socials')"
+        [ngClass]="{ 'current-section': currentSecID === 'socials' }">
+        <span>Socials</span>
+      </li>
+      <li
+        class="pointer"
+        (click)="scrollTo('team')"
+        [ngClass]="{ 'current-section': currentSecID === 'team' }">
+        <span>Team</span>
+      </li>
+      <li
+        class="pointer"
+        (click)="scrollTo('contacts')"
+        [ngClass]="{ 'current-section': currentSecID === 'contacts' }">
+        <span>Contacts</span>
+      </li>
+  </ul>
+</div>
